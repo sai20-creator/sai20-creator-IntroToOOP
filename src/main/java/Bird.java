@@ -1,3 +1,4 @@
+import javax.lang.model.util.ElementScanner6;
 
 /**
  * 
@@ -45,7 +46,15 @@ public class Bird {
      *         greater than or equal to 3.
      */
     public String sound(){
-        return "";
+
+        String snd[] ={"Tweet","Chirp"}; 
+        if(ageMonths<3){
+            return snd[0];
+        }else if(ageMonths>=3){
+            return snd[1];
+        }else{
+            return null;
+        }
     }
 
 }
